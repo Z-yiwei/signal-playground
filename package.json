@@ -1,0 +1,49 @@
+{
+  "name": "signal-playground",
+  "version": "0.2.0",
+  "description": "Interactive signal & spectrum visualizer for EE/CS learners — pluggable, extensible, beautiful.",
+  "type": "module",
+  "homepage": "https://signal-playground.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/signal-playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/signal-playground/issues"
+  },
+  "author": "Signal Playground contributors",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "dsp",
+    "signal-processing",
+    "fft",
+    "dct",
+    "ctft",
+    "dtft",
+    "z-transform",
+    "laplace",
+    "hilbert",
+    "visualization",
+    "education",
+    "image-processing",
+    "latex"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "fft.js": "^4.0.4",
+    "katex": "^0.16.9",
+    "mathjs": "^12.4.1",
+    "plotly.js-dist-min": "^2.35.2"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.7",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0"
+  }
+}

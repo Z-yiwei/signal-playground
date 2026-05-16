@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interactive signal & spectrum visualizer for EE/CS learners." />
+    <title>🌊 Signal Playground</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-logo">🌊</span>
+          <span class="brand-title" data-i18n="header.title">Signal Playground</span>
+          <span class="brand-tag">v0.2</span>
+        </div>
+        <nav class="domain-switcher" id="domain-switcher">
+          <button class="domain-btn active" data-domain="signal" data-i18n="header.domain.signal">📈 Signal</button>
+          <button class="domain-btn" data-domain="image" disabled
+                  data-i18n="header.domain.image"
+                  data-i18n-title="header.domain.image.tip"
+                  title="Coming in v0.3">🖼️ Image</button>
+        </nav>
+        <div class="header-actions">
+          <select id="preset-select" class="preset-select"
+                  data-i18n-title="header.preset.tip"
+                  title="Load teaching preset">
+            <option value="" data-i18n="header.preset.placeholder">— Presets —</option>
+          </select>
+          <button id="btn-cheatsheet" class="btn btn-ghost"
+                  data-i18n="header.btn.cheatsheet"
+                  data-i18n-title="header.btn.cheatsheet.tip"
+                  title="Show formula cheatsheet">📚 Cheatsheet</button>
+          <button id="btn-share" class="btn btn-ghost"
+                  data-i18n="header.btn.share"
+                  data-i18n-title="header.btn.share.tip"
+                  title="Copy shareable URL">🔗 Share</button>
+          <button id="export-png" class="btn btn-ghost"
+                  data-i18n="header.btn.png"
+                  data-i18n-title="header.btn.png.tip"
+                  title="Export plots as PNG">⬇ PNG</button>
+          <button id="export-csv" class="btn btn-ghost"
+                  data-i18n="header.btn.csv"
+                  data-i18n-title="header.btn.csv.tip"
+                  title="Export data as CSV">⬇ CSV</button>
+          <button id="btn-lang" class="btn btn-ghost btn-lang"
+                  data-i18n="header.btn.lang"
+                  data-i18n-title="header.btn.lang.tip"
+                  title="Switch language">中文</button>
+          <a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noopener"
+             data-i18n="header.btn.github">GitHub ↗</a>
+        </div>
+      </header>
+
+      <main class="app-main">
+        <aside class="control-panel" id="control-panel">
+          <!-- Dynamically rendered by ControlPanel.ts -->
+        </aside>
+        <section class="plot-grid" id="plot-grid">
+          <!-- Dynamically rendered by PlotGrid.ts -->
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <span id="status-bar" data-i18n="footer.ready">Ready</span>
+        <span class="footer-meta" data-i18n="footer.meta">Built with ❤ for the EE/CS community · MIT License</span>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
