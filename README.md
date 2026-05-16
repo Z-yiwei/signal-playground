@@ -89,67 +89,11 @@ See [`ARCHITECTURE.md`](ARCHITECTURE.md) for the full picture and [`CONTRIBUTING
 
 - 🎓 **Signals & Systems / DSP coursework** — stop guessing what the spectrum *should* look like; just see it.
 - 🔬 **Quick sanity checks while writing papers** — type the equation, eyeball the spectrum.
-- 📊 **Publication-ready figures** — PNG export at 1200×600 with the dark theme.
-- 👨‍🏫 **Classroom demos** — share a single URL and the whole class lands on the same configuration.
 - ✏️ **Exam revision** — flip through the cheatsheet drawer, run a preset, tweak parameters.
 
 <br>
 
-## 🗺 Roadmap
 
-### v0.1 — Signal MVP ✅
-- DFT / DCT / STFT
-- 7 sources, 4 windows, 5 presets
-- PNG + CSV export
-
-### v0.2 — Education Power-Up ✅
-- Continuous / Discrete switcher with compatibility filtering
-- LaTeX formula source (KaTeX preview + mathjs evaluation)
-- DTFT, DFS, DST, CTFT, CTFS, Hilbert, Z-Transform, Laplace
-- Cheatsheet drawer (definitions / properties / pairs)
-- Live TransformInfo card (formula + teaching hints)
-- Shareable URL snapshots
-- Full English / 中文 i18n
-
-### v0.3 — Image Domain 🖼
-- 2D-DFT / 2D-DCT (JPEG-style block compression demo)
-- Image upload & synthetic patterns
-- Frequency-domain filtering playground
-
-### v0.4 — Filter Lab
-- FIR / IIR designers with Bode plot
-- DWT (Daubechies, Haar)
-
-### v0.5 — Communication
-- AM / FM / PSK modulators
-- Constellation & eye diagrams
-
-### v1.0
-- Web Audio real-time input
-- Plugin marketplace
-
-<br>
-
-## 🛠 Tech Stack
-
-|  |  |
-|---|---|
-| Language | TypeScript 5 |
-| Build | Vite 5 |
-| Math eval | [mathjs](https://mathjs.org/) (LaTeX → mathjs preprocessor) |
-| Math render | [KaTeX](https://katex.org/) |
-| FFT | [fft.js](https://github.com/indutny/fft.js) (radix-2 Cooley–Tukey) |
-| Plotting | [Plotly.js](https://plotly.com/javascript/) (WebGL traces) |
-| Architecture | Plugin registry + schema-driven UI |
-| Hosting | Static (works on GitHub Pages, Vercel, Netlify, Cloudflare Pages) |
-
-<br>
-
-## 🤝 Contributing
-
-Contributions are very welcome — especially **new transforms, sources, or visualizers**. The plugin model means most additions are a single file plus a one-line registration. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the 5-minute walkthrough.
-
-<br>
 
 ## 📜 License
 
@@ -169,7 +113,7 @@ Contributions are very welcome — especially **new transforms, sources, or visu
 
 ## ✨ 项目亮点
 
-教科书的频谱图都是静态的，在线工具又往往把数学藏起来。**Signal Playground** 想做中间那一层：每个变换都给出 LaTeX 定义，每个信号都是参数的实时函数，每个结果都能一键生成可分享的链接。
+教科书的频谱图都是静态的，在线工具又往往把数学藏起来。**Signal Playground** 想做中间那一层：支持任意信号输入，每个信号都是参数的实时函数，每个结果都能一键生成可分享的链接。
 
 - 🧪 **连续 / 离散双模式**：在 $x(t)$ 与 $x[n]$ 之间一键切换，变换列表会自动按兼容性过滤。
 - ✏️ **LaTeX 公式信号源**：直接键入 `\sin(2\pi \cdot 5 t) + e^{-t}`，KaTeX 实时渲染，mathjs 即时求值。
@@ -209,92 +153,16 @@ npm run preview
 
 <br>
 
-## 🧭 项目结构概览
-
-```
-DataSource ──▶ Window ──▶ Transform ──▶ Visualizer
-   信号源       窗函数       变换           可视化器
-```
-
-所有模块都是注册到中央 `Registry` 的**插件**。新增一个变换 = 写一个 TypeScript 文件并导出。UI 会根据参数 schema 自动生成控件。
-
-| 概念 | 位置 | 作用 |
-|---|---|---|
-| `IDataSource` | `src/domains/signal/sources/` | 由参数生成 `DataBuffer`（正弦、公式、Chirp …）。 |
-| `ITransform` | `src/domains/signal/transforms/` | 纯函数：`DataBuffer → DataBuffer \| ComplexBuffer`。 |
-| `IWindow` | `src/domains/signal/windows/` | 输出长度为 N 的窗函数系数。 |
-| `IPreset` | `src/domains/signal/presets/` | 把一个教学场景固化为完整管线配置。 |
-| `IVisualizer` | `src/visualizers/` | 把缓冲区渲染成图（折线图、热力图 …）。 |
-
-更多细节见 [`ARCHITECTURE.md`](ARCHITECTURE.md)；想动手贡献，请看 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
-
-<br>
 
 ## 🎯 适用场景
 
-- 🎓 **信号与系统 / DSP 课程**：不再凭空猜频谱，直接动手看。
+- 🎓 **信号课程**：不再凭空猜频谱，直接动手看。
 - 🔬 **写论文时的快速验证**：把公式键进去，瞄一眼频谱就行。
-- 📊 **生成可发表的高清图**：PNG 1200×600，暗色主题。
-- 👨‍🏫 **课堂演示**：分享一个 URL，全班同学瞬间落到同一份配置上。
 - ✏️ **复习备考**：打开速查表抽屉，加载预设，调参对比。
 
 <br>
 
-## 🗺 路线图
 
-### v0.1 — 信号 MVP ✅
-- DFT / DCT / STFT
-- 7 种信号源，4 种窗函数，5 个预设
-- PNG + CSV 导出
-
-### v0.2 — 教学增强 ✅
-- 连续 / 离散切换器与兼容性过滤
-- LaTeX 公式信号源（KaTeX 预览 + mathjs 求值）
-- DTFT、DFS、DST、CTFT、CTFS、希尔伯特、Z 变换、拉普拉斯
-- 公式速查表抽屉（定义 / 性质 / 变换对）
-- 变换信息卡片（公式 + 教学提示）
-- URL 快照分享
-- 完整中英双语 i18n
-
-### v0.3 — 图像域 🖼
-- 2D-DFT / 2D-DCT（JPEG 风格分块压缩演示）
-- 图像上传 & 合成图样
-- 频域滤波 Playground
-
-### v0.4 — 滤波器实验室
-- FIR / IIR 设计器与 Bode 图
-- 离散小波（Daubechies、Haar）
-
-### v0.5 — 通信
-- AM / FM / PSK 调制
-- 星座图 & 眼图
-
-### v1.0
-- Web Audio 实时输入
-- 插件市场
-
-<br>
-
-## 🛠 技术栈
-
-|  |  |
-|---|---|
-| 语言 | TypeScript 5 |
-| 构建 | Vite 5 |
-| 数学求值 | [mathjs](https://mathjs.org/)（自带 LaTeX → mathjs 预处理器） |
-| 公式渲染 | [KaTeX](https://katex.org/) |
-| FFT | [fft.js](https://github.com/indutny/fft.js)（基-2 Cooley–Tukey） |
-| 绘图 | [Plotly.js](https://plotly.com/javascript/)（WebGL trace） |
-| 架构 | 插件注册中心 + Schema 驱动 UI |
-| 部署 | 静态托管（GitHub Pages / Vercel / Netlify / Cloudflare Pages 都可） |
-
-<br>
-
-## 🤝 参与贡献
-
-非常欢迎贡献，尤其是 **新变换、新信号源、新可视化器**。插件式架构意味着大多数新增功能只需一个文件 + 一行注册代码。详细步骤见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
-
-<br>
 
 ## 📜 开源协议
 
