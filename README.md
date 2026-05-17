@@ -5,7 +5,7 @@
 **Interactive signal & spectrum visualizer for EE / CS learners and researchers.**
 **面向电子 / 计算机方向同学的交互式信号与频谱可视化平台。**
 
-[**🔗 Live Demo · 在线体验**](https://signal-playground.vercel.app/) &nbsp;·&nbsp;
+[**🔗 Live Demo · 在线体验**](https://Z-yiwei.github.io/signal-playground/) &nbsp;·&nbsp;
 [**📖 Architecture · 架构**](ARCHITECTURE.md) &nbsp;·&nbsp;
 [**🤝 Contributing · 参与贡献**](CONTRIBUTING.md)
 
@@ -58,7 +58,7 @@ npm run build
 npm run preview
 ```
 
-> **Tip · Online demo**: [https://signal-playground.vercel.app/](https://signal-playground.vercel.app/) — no install, just open and play.
+> **Tip · Online demo**: [https://Z-yiwei.github.io/signal-playground/](https://Z-yiwei.github.io/signal-playground/) — no install, just open and play.
 >
 > The repo also ships a GitHub Pages workflow ([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)). Forking the repo and enabling Pages will publish the build to `https://<your-username>.github.io/signal-playground/` automatically.
 
@@ -99,7 +99,7 @@ Everything is a **plugin** registered into a central `Registry`. Adding a new tr
 
 **面向 EE / CS 学习者与研究者的交互式信号 / 频谱可视化平台。**
 
-> 🔗 在线体验：[https://signal-playground.vercel.app/](https://signal-playground.vercel.app/)
+> 🔗 在线体验：[https://Z-yiwei.github.io/signal-playground/](https://Z-yiwei.github.io/signal-playground/)
 
 ## ✨ 项目亮点
 
