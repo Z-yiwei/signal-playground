@@ -6,10 +6,10 @@
   "homepage": "https://signal-playground.vercel.app/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/signal-playground.git"
+    "url": "https://github.com/Z-yiwei/signal-playground.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/signal-playground/issues"
+    "url": "https://github.com/Z-yiwei/signal-playground/issues"
   },
   "author": "Signal Playground contributors",
   "scripts": {
