@@ -15,6 +15,7 @@
 [![Plotly](https://img.shields.io/badge/Plot-Plotly.js-3F4F75.svg?logo=plotly&logoColor=white)](https://plotly.com/javascript/)
 [![KaTeX](https://img.shields.io/badge/Math-KaTeX-329F75.svg)](https://katex.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Star History Chart](https://api.star-history.com/svg?repos=Z-yiwei/signal-playground&type=Date)](https://star-history.com/#Z-yiwei/signal-playground&Date)
 
 </div>
 
