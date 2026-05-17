@@ -1,7 +1,5 @@
 <div align="center">
 
-![Signal Playground Demo](https://github.com/Z-yiwei/signal-playground/raw/main/assets/example.jpg)
-
 # 🌊 Signal Playground
 
 **Interactive signal & spectrum visualizer for EE / CS learners and researchers.**
@@ -21,6 +19,10 @@
 </div>
 
 > 🌐 **English** · [中文](#-中文版)
+
+<p align="center">
+  <img src="https://github.com/Z-yiwei/signal-playground/raw/main/assets/example.jpg" alt="Signal Playground Demo" width="100%" />
+</p>
 
 ---
 
