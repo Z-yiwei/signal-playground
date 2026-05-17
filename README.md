@@ -1,6 +1,6 @@
 <div align="center">
 
-![Signal Playground Demo](assets/example.jpg)
+![Signal Playground Demo](https://github.com/Z-yiwei/signal-playground/raw/main/assets/example.jpg)
 
 # 🌊 Signal Playground
 
