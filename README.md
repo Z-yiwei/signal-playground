@@ -1,5 +1,7 @@
 <div align="center">
 
+![Signal Playground Demo](assets/example.jpg)
+
 # 🌊 Signal Playground
 
 **Interactive signal & spectrum visualizer for EE / CS learners and researchers.**
