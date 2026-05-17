@@ -73,16 +73,6 @@ DataSource ──▶ Window ──▶ Transform ──▶ Visualizer
 
 Everything is a **plugin** registered into a central `Registry`. Adding a new transform = writing one TypeScript file and exporting it. The UI auto-generates parameter controls from the schema.
 
-| Concept | Where | What it does |
-|---|---|---|
-| `IDataSource` | `src/domains/signal/sources/` | Produces a `DataBuffer` from parameters (sine, formula, chirp…). |
-| `ITransform` | `src/domains/signal/transforms/` | Pure function `DataBuffer → DataBuffer \| ComplexBuffer`. |
-| `IWindow` | `src/domains/signal/windows/` | Generates a length-N coefficient array. |
-| `IPreset` | `src/domains/signal/presets/` | Materialises a teaching scenario into a full pipeline config. |
-| `IVisualizer` | `src/visualizers/` | Renders a buffer (line plot, heatmap, …). |
-
-See [`ARCHITECTURE.md`](ARCHITECTURE.md) for the full picture and [`CONTRIBUTING.md`](CONTRIBUTING.md) for "add a transform in 5 minutes".
-
 <br>
 
 ## 🎯 Use Cases
@@ -113,7 +103,7 @@ See [`ARCHITECTURE.md`](ARCHITECTURE.md) for the full picture and [`CONTRIBUTING
 
 ## ✨ 项目亮点
 
-教科书的频谱图都是静态的，在线工具又往往把数学藏起来。**Signal Playground** 想做中间那一层：支持任意信号输入，每个信号都是参数的实时函数，每个结果都能一键生成可分享的链接。
+教科书的频谱图都是静态的，在线工具又往往把数学藏起来。**Signal Playground** 想做中间那一层：支持Latex输入信号一键识别，每个信号都是参数的实时函数，每个结果都能一键生成可分享的链接。
 
 - 🧪 **连续 / 离散双模式**：在 $x(t)$ 与 $x[n]$ 之间一键切换，变换列表会自动按兼容性过滤。
 - ✏️ **LaTeX 公式信号源**：直接键入 `\sin(2\pi \cdot 5 t) + e^{-t}`，KaTeX 实时渲染，mathjs 即时求值。
@@ -156,7 +146,7 @@ npm run preview
 
 ## 🎯 适用场景
 
-- 🎓 **信号课程**：不再凭空猜频谱，直接动手看。
+- 🎓 **信号类课程课程**：不再凭空猜频谱，支持latex公式输入后直接查看频谱。
 - 🔬 **写论文时的快速验证**：把公式键进去，瞄一眼频谱就行。
 - ✏️ **复习备考**：打开速查表抽屉，加载预设，调参对比。
 
