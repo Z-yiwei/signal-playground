@@ -141,8 +141,6 @@ npm run build
 npm run preview
 ```
 
-> **在线试用**：直接打开 [https://signal-playground.vercel.app/](https://signal-playground.vercel.app/)，无需任何安装。
->
 > 仓库自带 GitHub Pages 部署工作流（[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)）。Fork 后开启 Pages 即可自动发布到 `https://<你的用户名>.github.io/signal-playground/`。
 
 <br>
