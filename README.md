@@ -3,7 +3,7 @@
 # 🌊 Signal Playground
 
 **Interactive signal & spectrum visualizer for EE / CS learners and researchers.**
-**面向电子 / 计算机方向同学的交互式信号与频谱可视化平台。**
+**面向电子 / 计算机方向研究学习者的交互式信号与频谱可视化平台。**
 
 [**🔗 Live Demo · 在线体验**](https://Z-yiwei.github.io/signal-playground/) &nbsp;·&nbsp;
 [**📖 Architecture · 架构**](ARCHITECTURE.md) &nbsp;·&nbsp;
