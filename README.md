@@ -162,8 +162,4 @@ npm run preview
 
 <br>
 
----
 
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Z-yiwei/signal-playground&type=Date)](https://star-history.com/#Z-yiwei/signal-playground&Date)
